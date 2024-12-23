@@ -1,9 +1,11 @@
-#include <stdio.h>
+#include <emscripten.h>
 
-// #ifdef __EMSCRIPTEN__
-// #include <emscripten.h>
-// #endif
+EM_JS(void, call_alert, (), {
+  alert('hello world!');
+  throw 'all done';
+});
 
-int main(int argc, char** argv) {
-  printf("hello, world!\n");
+int main() {
+  call_alert();
+  return 0;
 }
