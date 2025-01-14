@@ -1,0 +1,10 @@
+*.html
+*.map
+*.js
+*.wasm
+*.config.json
+!unalign_wechat_env.js
+!wechat_pre.js
+!wechat_post.js
+!wechat_transformer.js
+!game.js

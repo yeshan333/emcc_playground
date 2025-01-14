@@ -1,0 +1,17 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "StartHTTPServer",
+            "type": "process",
+            "command": "${input:StartHTTPServer}"
+        }
+    ],
+    "inputs": [
+        {
+            "id": "StartHTTPServer",
+            "type": "command",
+            "command": "livePreview.runServerLoggingTask"
+        }
+    ]
+}

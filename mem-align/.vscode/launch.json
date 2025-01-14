@@ -1,0 +1,35 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "debug by node",
+            "program": "${file}",
+            "outFiles": [
+                "${workspaceFolder}/**/*.(m|cc|c|)js",
+                "${workspaceFolder}/**/*.cc",
+                "${workspaceFolder}/**/*.c",
+                "!**/node_modules/**"
+            ],
+            "sourceMaps": true,
+            "sourceMapPathOverrides": {
+                "*": "${workspaceFolder}/unalign.wasm.map"
+            },
+            "pauseForSourceMap": true
+        },
+        {
+            "type": "chrome",
+            "name": "http://localhost:3000",
+            "request": "launch",
+            "url": "http://localhost:3000/unalign.html",
+            "pauseForSourceMap": true,
+            "resolveSourceMapLocations": [
+                "http://localhost:3000/unalign.wasm.map"
+            ]
+        }
+    ]
+}

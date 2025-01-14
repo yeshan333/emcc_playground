@@ -5,3 +5,11 @@ build/
 # MacOS Cache
 .DS_Store
 *.log
+node_modules
+binaryen-version_121
+wabt-1.0.36
+*.html
+*.map
+*.js
+*.wasm
+*.config.json
